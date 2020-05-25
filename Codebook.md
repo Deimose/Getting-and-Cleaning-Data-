@@ -1,7 +1,41 @@
 This is a codebook for Getting and Cleaning Data course project. The output of this project is a tidy data set stored in a file named TidyDataSet.txt.
 
-The tidy data set contains mean and standard deviation values of 33 parameters measured for 30 subjects for 6 different activities.
+You should create one R script called run_analysis.R that does the following.
 
-#The parameters listed in tidy data set '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-1.tBodyAcc-XYZ 2.tGravityAcc-XYZ 3.tBodyAccJerk-XYZ 4.tBodyGyro-XYZ 5.tBodyGyroJerk-XYZ 6.tBodyAccMag 7.tGravityAccMag 8.tBodyAccJerkMag 9.tBodyGyroMag 10.tBodyGyroJerkMag 11.fBodyAcc-XYZ 12.fBodyAccJerk-XYZ 13.fBodyGyro-XYZ 14.fBodyAccMag 15.fBodyAccJerkMag 16.fBodyGyroMag 17.fBodyGyroJerkMag
+
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+1. Merges the training and the test sets to create one data set.
+
+
+2. Extracts only the measurements on the mean and standard deviation for each measurement
+
+ExtractData (10299 rows, 88 columns) is created by subsetting Merged_Data, selecting only columns: subject, codeand the measurements on the mean and standard deviation (std) for each measurement.
+
+
+3. Uses descriptive activity names to name the activities in the data set
+
+Entire numbers in code column of the ExtractData replaced with corresponding activity taken from second column of the activities variable.
+
+
+4. Appropriately labels the data set with descriptive variable names
+
+"Acc"  in column’s of Tidy replaced by Accelerometer
+"Gyro" in column’s of Tidy  replaced by Gyroscope
+"Mag" in column’s of Tidy  replaced by Body
+"^t"   in column’s of Tidy  replaced by TimeDomain
+"^f"   in column’s of Tidy  replaced by FrequencyDomain
+"BodyBody"  in column’s of Tidy  replaced by Body
+"tBoby" in column’s of Tidy  Timebody
+"angel" in column’s of Tidy Angle
+"gravity"  in column’s of Tidy Gravity
+
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+
+
+Export Tidt into Tidy.txt file.
+ 
